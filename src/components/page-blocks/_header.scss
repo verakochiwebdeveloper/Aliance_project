@@ -1,0 +1,182 @@
+.header {
+  height: 100vh;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.--header-main {
+  background: url(../img/main_header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 100px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+  
+}
+
+.header__wrapper {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.2s;
+}
+
+.--header__wrapper-white {
+  background: #fff;
+  color: black;
+  z-index: 5;
+}
+
+.--header__wrapper-white .menu__list-link {
+  color: #292d33;
+}
+
+.--header__wrapper-white .header__contact-phone {
+  color: #292d33;
+}
+
+.--header__wrapper-white .logo-svg {
+  fill: #292d33;
+}
+
+.logo_white {
+  margin-left: 50px;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    border-left: solid 1px rgb(235, 235, 240, 0.2);
+    width: 1px;
+    height: 87px;
+    top: -20px;
+    left: 200px;
+  }
+}
+
+.menu__list {
+  display: flex;
+  margin-right: 187px;
+  &-item {
+    margin-left: 50px;
+  }
+  &-link {
+    color: #fff;
+  }
+}
+
+.header__contact {
+  &-phone {
+    display: block;
+    margin-right: 50px;
+    color: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    &::before {
+      content: url(../img/phone.svg);
+      position: absolute;
+      left: -30px;
+      top: 20%;
+    }
+  }
+
+  &-callback {
+    padding: 38px 55px;
+  }
+}
+
+.header__content {
+  color: #fff;
+  margin-top: 165px;
+
+  &-title {
+   // text-transform: uppercase;
+    width: 1020px;
+    letter-spacing: 0;
+  }
+
+  &-text {
+    width: 720px;
+    margin-top:40px;
+    display: block;
+  }
+}
+
+.header__link-about {
+  padding: 28px 63px;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.header__about {
+  margin-top: 95px;
+  border: solid 1px rgba(235, 235, 240, 0.2);
+
+  &-item {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    border-left: solid 1px rgba(235, 235, 240, 0.2);
+    padding: 30px 47px;
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  &-icon {
+    display: block;
+    margin-bottom: 20px;
+    width: 36px;
+    height: 36px;
+    object-fit: none;
+    object-position: center;
+  }
+  &-text {
+    width: 188px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .--header-main {
+    width: 1200px;
+  }
+
+  .full__container {
+    width: 1200px;
+  }
+
+  .container {
+    width: 1200px;
+  }
+  .menu__list {
+    margin-right: 50px;
+    align-items: center;
+  }
+  .menu__list-item {
+    margin-left: 30px;
+  }
+
+  .header__contact-callback {
+    padding: 20px;
+  }
+}

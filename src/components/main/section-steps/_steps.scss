@@ -1,0 +1,61 @@
+.steps {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 50px;
+    gap: 0 30px;
+    &-item {
+        width: 330px;
+        
+    }
+
+    &-counter {
+      font-family: "Bebas Neue";
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 58px;
+      margin-bottom: 30px;
+      position: relative;
+      top: 0;
+      left: 0;
+
+      &:before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        background: #828A99;
+        width: 260px;
+        height: 1px;
+      }
+    }
+
+    &-title {
+      width: 300px;
+    }
+
+    &-link {
+        display: block;
+        margin: 20px 0 0 50px;
+        position: relative;
+        top: 0;
+        left:0;
+        &::after {
+            content: " ";
+            position: absolute;
+            top: 50%;
+            left: -50px;
+            background: #5C8EE5;
+            width: 40px;
+            height: 1px;
+        }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .steps__list {
+    gap: 50px 100px;
+  }
+}

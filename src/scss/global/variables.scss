@@ -1,0 +1,101 @@
+.--border-down {
+  border-bottom: solid 1px rgb(235, 235, 240, 0.2);
+}
+
+.--btn-default {
+  border: none;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background: #5c8ee5;
+  color: #ffffffff;
+  font-family: "Noto Sans";
+  &:hover {
+    background: #3a71d1;
+    transition: ease-in 0.35;
+  }
+  &:active {
+    background: #5c8ee5;
+  }
+}
+
+.--p {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.--h1 {
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  font-size: 78px;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+
+.--h2 {
+  font-family: "Bebas Neue";
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 72px;
+}
+
+.--h3 {
+  font-family: "Noto Sans";
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 45px;
+}
+
+.--bold {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.--txt2 {
+  color: #828a99;
+}
+
+.--main {
+  color: #3a71d1;
+}
+
+.--title-line-blue,
+.--title-line-black {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.--title-line-blue::after,
+.--title-line-black::after {
+  content: " ";
+  position: absolute;
+  top: -23px;
+  left: 0;
+  background: #5c8ee5;
+  height: 2px;
+  width: 150px;
+}
+
+.--title-line-black::after {
+  background: #000;
+}
+
+.--section-padding-top {
+  padding-top: 180px;
+}
+
+.--bg-sep {
+  background: #ebebf0;
+}
+
+@media (max-width: 1400px) {
+  .--p {
+    font-size: 14px;
+  }
+}
