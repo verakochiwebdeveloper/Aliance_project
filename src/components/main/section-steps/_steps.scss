@@ -55,6 +55,9 @@
 }
 
 @media (max-width: 1400px) {
+  .steps {
+    width: 1200px;
+  }
   .steps__list {
     gap: 50px 100px;
   }
