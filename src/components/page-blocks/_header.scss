@@ -97,21 +97,93 @@
 
 .header__wrapper-mobile {
   position: absolute;
-  z-index: 4;
-  background: #fff;
+  z-index: 10;
+  background: #FAFBFC;
   padding: 30px 15px;
   top: 56px;
   width: 375px;
   display: none;
 }
 
-.contract-production, .brands__list {
+.contract-production,
+.brands__list {
   margin: 20px;
 }
 
-.contract-production__item, .brands__list-item {
+.contract-production__item,
+.brands__list-item {
   margin-top: 10px;
 }
+.contact__mobile {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top: 30px; 
+  padding-top: 30px;
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 410px;
+    height: 1px;
+    background: rgba(235, 235, 240);
+  }
+  
+}
+
+.contact__mobile-phone {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-decoration: underline;
+}
+
+.contact__adress {
+  font-style: normal;
+  margin: 21px 0px 11px 34px; 
+  position: relative;
+  top: 0;
+  left: 0;
+  
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    background: url(../img/mark.svg);
+    width: 24px;
+    height: 24px;
+    
+  }
+}
+
+.contact__mail {
+  display: block;
+  margin-left: 34px;
+  position: relative;
+  top: 0;
+  left: 0;
+  &:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    background: url(../img/mail.svg);
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.contact__social {
+  margin-top: 30px;
+  &-vk {
+    display: block;
+    margin-right: 15px;
+  }
+}
+
 
 .--mob {
   margin-top: 30px;
@@ -120,12 +192,14 @@
 .burger-btn {
   width: 50px;
   height: 50px;
-  border:none;
+  border: none;
   background: none;
   display: none;
   position: relative;
   top: 0;
   left: 0;
+  padding: 0 15px;
+  cursor: pointer;
 
   &::before {
     content: " ";
@@ -136,21 +210,21 @@
     top: -20px;
     left: 50px;
   }
-
-  
-  
 }
-.menu__burger-line, .menu__burger-line:after, .menu__burger-line::before {
+.menu__burger-line,
+.menu__burger-line:after,
+.menu__burger-line::before {
   width: 20px;
-    height: 1px;
-    background:  #fff;
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
+  height: 1px;
+  background: #fff;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
-.menu__burger-line:after, .menu__burger-line::before {
+.menu__burger-line:after,
+.menu__burger-line::before {
   content: " ";
   position: absolute;
   width: 25px;
@@ -163,19 +237,20 @@
 }
 
 .--header__wrapper-white .menu__burger-line {
-  background:#000;
+  background: #000;
 }
 
 .--header__wrapper-white .menu__burger-line::after {
-  background:#000;
+  background: #000;
 }
 
 .--header__wrapper-white .menu__burger-line::before {
-  background:#000;
+  background: #000;
 }
 
-
-
+.show.header__wrapper-mobile {
+  display: block;
+}
 
 .header__content {
   color: #fff;
@@ -232,16 +307,15 @@
 
 @media (max-width: 1400px) {
   .--header-main {
-    width: 1200px;
+    width: 100%;
   }
 
   .full__container {
     width: 1200px;
-    
   }
 
   .header__wrapper {
-    width: 100%;
+    width: 1200px;
   }
 
   .logo_white {
@@ -255,6 +329,10 @@
 
   .container {
     width: 1200px;
+  }
+
+  .header__wrapper {
+    width: 100%;
   }
   .menu__list {
     margin-right: 40px;
@@ -277,6 +355,10 @@
     padding: 20px;
   }
 
+  .icon__phone {
+    display: none;
+  }
+
   .--header__wrapper-white .header__contact-callback {
     padding: 20px;
   }
@@ -286,12 +368,11 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .--header-main {
     width: 768px;
   }
-  
+
   .full__container {
     width: 768px;
   }
@@ -307,7 +388,7 @@
     width: 768px;
   }
 
-  .logo_white{
+  .logo_white {
     &::before {
       display: none;
     }
@@ -318,15 +399,11 @@
   .--menu-burger-active {
     display: block;
     position: absolute;
-    background: #fff;
+
     padding: 15px;
-    
-    
   }
   .menu__list-link {
     color: #292d33;
-
-    
   }
   .header__content-title {
     font-size: 45px;
@@ -336,7 +413,24 @@
   .burger-btn {
     display: block;
   }
+}
 
-  
+@media (max-width: 375px) {
+  .icon__phone {
+    display: block;
+  }
+  .full__container {
+    width: 375px;
+  }
 
+  .container {
+    width: 375px;
+  }
+  .header__wrapper {
+    width: 375px;
+  }
+
+  .header__contact-callback span {
+    display: none;
+  } 
 }

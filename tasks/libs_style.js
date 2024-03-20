@@ -1,4 +1,4 @@
-const plugins = [];
+const plugins = ["./node_modules/@splidejs/splide/dist/css/splide.min.css"];
 
 const {
   src,

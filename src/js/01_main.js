@@ -1,4 +1,7 @@
-const scrollWrapper = document.querySelector (".header__wrapper")
+const scrollWrapper = document.querySelector (".header__wrapper"),
+  mobileMenuButton = document.querySelector (".burger-btn"),
+  mobileMenu = document.querySelector (".header__wrapper-mobile")
+
 window.addEventListener('scroll', ()=> {
     
     if(this.scrollY > 1) {
@@ -24,3 +27,9 @@ window.addEventListener('scroll', ()=> {
  scrolHeader()
 
  */
+
+ 
+    mobileMenu.addEventListener('clck',(event)=> {
+        event.preventDefault();
+        mobileMenu.classList.toggle('show')
+    })
